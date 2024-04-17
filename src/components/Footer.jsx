@@ -20,16 +20,16 @@ const Footer = () => {
                     <p className="text-sm mb-2">© 2024 SQUAD. All rights reserved.</p>
                 </div>
                 <div className="flex flex-row justify-center md:justify-end space-x-4 mt-4 md:mt-0">
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 xl:w-16 xl:h-16 max-w-[100px] max-h-[100px] shadow-md rounded-lg overflow-hidden transition-transform duration-500 ease-in-out transform hover:scale-105 hover:shadow-lg">
+                    <a href="https://www.facebook.com/squadadelaide" target="_blank" rel="noopener noreferrer" className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 xl:w-16 xl:h-16 max-w-[100px] max-h-[100px] shadow-md rounded-lg overflow-hidden transition-transform duration-500 ease-in-out transform hover:scale-105 hover:shadow-lg">
                         <img src={require('./fb2.jpeg')} alt="Facebook" className="w-full h-full object-cover" /> 
                     </a>
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 xl:w-16 xl:h-16 max-w-[100px] max-h-[100px] shadow-md rounded-lg overflow-hidden transition-transform duration-500 ease-in-out transform hover:scale-105 hover:shadow-lg">
+                    <a href="https://www.instagram.com/squadadelaide/" target="_blank" rel="noopener noreferrer" className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 xl:w-16 xl:h-16 max-w-[100px] max-h-[100px] shadow-md rounded-lg overflow-hidden transition-transform duration-500 ease-in-out transform hover:scale-105 hover:shadow-lg">
                         <img src={require('./insta.jpeg')} alt="Twitter" className="w-full h-full object-cover" />
                     </a>
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 xl:w-16 xl:h-16 max-w-[100px] max-h-[100px] shadow-md rounded-lg overflow-hidden transition-transform duration-500 ease-in-out transform hover:scale-105 hover:shadow-lg">
+                    <a href="https://www.linkedin.com/company/squad-adelaide/" target="_blank" rel="noopener noreferrer" className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 xl:w-16 xl:h-16 max-w-[100px] max-h-[100px] shadow-md rounded-lg overflow-hidden transition-transform duration-500 ease-in-out transform hover:scale-105 hover:shadow-lg">
                         <img src={require('./ln.jpeg')} alt="Instagram" className="w-full h-full object-cover" /> 
                     </a>
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 xl:w-16 xl:h-16 max-w-[100px] max-h-[100px] shadow-md rounded-lg overflow-hidden transition-transform duration-500 ease-in-out transform hover:scale-105 hover:shadow-lg">
+                    <a href="https://www.youtube.com/watch?v=mjD7V5s4h_M" target="_blank" rel="noopener noreferrer" className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 xl:w-16 xl:h-16 max-w-[100px] max-h-[100px] shadow-md rounded-lg overflow-hidden transition-transform duration-500 ease-in-out transform hover:scale-105 hover:shadow-lg">
                         <img src={require('./dis.jpeg')} alt="Instagram" className="w-full h-full object-cover" /> 
                     </a>
                 </div>
