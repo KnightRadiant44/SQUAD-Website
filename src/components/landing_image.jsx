@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { AiOutlineClose, AiOutlineMenu, AiOutlineArrowDown } from 'react-icons/ai';
 import { ReactTyped } from 'react-typed';
+import ScrollToTopButton from './ScrollToTopButton';
+
 
 function Navbar() {
 
@@ -43,6 +45,7 @@ function Navbar() {
           <AiOutlineArrowDown size={24} className="text-[#47B6FE]" />
         </button>
       </div>
+      <ScrollToTopButton />
     </div>
   );
 }

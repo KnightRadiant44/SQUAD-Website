@@ -7,6 +7,7 @@ import LandingImage from './components/landing_image';
 import Events from './components/Events';
 import Footer from './components/Footer';
 import Sponsors from './components/Sponsors';
+import ScrollToTopButton from './components/ScrollToTopButton';
 
 function App() {
    return (
@@ -17,6 +18,7 @@ function App() {
        <Events />
        <Sponsors />
        <Footer />
+       <ScrollToTopButton />
      </div>
    );
 }
