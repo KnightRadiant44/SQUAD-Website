@@ -75,7 +75,7 @@ const SponsorsPageSponsors = () => {
                     </div>
                 </div>
                 <div className="flex flex-col md:flex-row w-full md:space-x-4 items-center justify-center">
-                    <a href="https://www.imc.com/ap/" target="_blank" rel="noopener noreferrer" className="w-full md:w-1/2">
+                    <a href="https://www.citadelsecurities.com/" target="_blank" rel="noopener noreferrer" className="w-full md:w-1/2">
                         <div className="w-full h-[200px] sm:h-[30vh] shadow-[0_4px_12px_rgba(205,127,50,0.5)] rounded-lg overflow-hidden mt-5 transition-transform duration-500 ease-in-out transform hover:scale-105 hover:shadow-[0_8px_16px_rgba(205,127,50,0.5)] hover:bg-gold">
                             <img src={require('./citadel.jpeg')} alt="Sponsor 1" className="w-full sm:h-1/2 h-1/3 object-scale-down" />
                             <div className="w-full sm:h-1/2 h-2/3 bg-white p-4 text-center overflow-auto">

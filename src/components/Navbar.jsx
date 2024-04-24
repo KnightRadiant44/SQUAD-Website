@@ -59,7 +59,7 @@ function Navbar() {
             <li className="p-4 hover:text-gray-500">About Us</li>
             <li className="p-4 hover:text-gray-500"><Link to="/sponsors">Sponsors</Link></li>
             <li className="p-4 hover:text-gray-500">Events</li>
-            <li className="p-4 hover:text-gray-500">Contact Us</li>
+            <li className="p-4 hover:text-gray-500"><Link to="/contactUs">Contact Us</Link></li>
           </ul>
           <div onClick={handleNav} className="block md:hidden">
             {!nav ? (
@@ -74,7 +74,7 @@ function Navbar() {
               <li className="p-4 hover:text-gray-500 border-b border-gray-200">About Us</li>
               <li className="p-4 hover:text-gray-500 border-b border-gray-200"><Link onClick={handleNav}  to="/sponsors">Sponsors</Link></li>
               <li className="p-4 hover:text-gray-500 border-b border-gray-200">Events</li>
-              <li className="p-4 hover:text-gray-500">Contact Us</li>
+              <li className="p-4 hover:text-gray-500"><Link onClick={handleNav}  to="/contactUs">Contact Us</Link></li>
             </ul>
           </div>
         </div>

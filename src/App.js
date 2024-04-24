@@ -11,6 +11,8 @@ import Sponsors from './components/Sponsors';
 import SponsorsPage from './components/SponsorsPage';
 import ScrollToTopButton from './components/ScrollToTopButton';
 import SponsorsPageSponsors from './components/SponsorsPage/SponsorsPageSponsors';
+import ContactUs from './components/contactUs/contactUs';
+import ContactUsBoomBoomPow from './components/contactUs/contactUsBoomBoomPow';
 
 function App() {
    return (
@@ -32,6 +34,14 @@ function App() {
               <>
                 <SponsorsPage />
                 < SponsorsPageSponsors />
+                <Footer />
+                <ScrollToTopButton />
+              </> 
+              } />
+            <Route path="/contactUs" element={
+              <>
+                <ContactUs />
+                <ContactUsBoomBoomPow />
                 <Footer />
                 <ScrollToTopButton />
               </> 
