@@ -13,6 +13,7 @@ import ScrollToTopButton from './components/ScrollToTopButton';
 import SponsorsPageSponsors from './components/SponsorsPage/SponsorsPageSponsors';
 import ContactUs from './components/contactUs/contactUs';
 import ContactUsBoomBoomPow from './components/contactUs/contactUsBoomBoomPow';
+import Aeda from './components/aeda';
 
 function App() {
    return (
@@ -26,6 +27,7 @@ function App() {
                <AboutUs />
                <Events />
                <Sponsors />
+               <Aeda />
                <Footer />
                <ScrollToTopButton />
              </>
