@@ -8,7 +8,7 @@ import LandingImage from './components/landing_image';
 import Events from './components/Events';
 import Footer from './components/Footer';
 import Sponsors from './components/Sponsors';
-import SponsorsPage from './components/SponsorsPage';
+import SponsorsPage from './components/SponsorsPage/SponsorsPage';
 import ScrollToTopButton from './components/ScrollToTopButton';
 import SponsorsPageSponsors from './components/SponsorsPage/SponsorsPageSponsors';
 import ContactUs from './components/contactUs/contactUs';
