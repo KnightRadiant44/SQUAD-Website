@@ -8,11 +8,13 @@ import LandingImage from './components/landing_image';
 import Events from './components/Events';
 import Footer from './components/Footer';
 import Sponsors from './components/Sponsors';
-import SponsorsPage from './components/SponsorsPage';
+import SponsorsPage from './components/SponsorsPage/SponsorsPage';
 import ScrollToTopButton from './components/ScrollToTopButton';
 import SponsorsPageSponsors from './components/SponsorsPage/SponsorsPageSponsors';
 import ContactUs from './components/contactUs/contactUs';
 import ContactUsBoomBoomPow from './components/contactUs/contactUsBoomBoomPow';
+import Aeda from './components/aeda';
+import EventsPage from './components/events/Events';
 
 function App() {
    return (
@@ -26,6 +28,7 @@ function App() {
                <AboutUs />
                <Events />
                <Sponsors />
+               <Aeda />
                <Footer />
                <ScrollToTopButton />
              </>
@@ -33,19 +36,26 @@ function App() {
            <Route path="/sponsors" element={
               <>
                 <SponsorsPage />
-                < SponsorsPageSponsors />
+                <SponsorsPageSponsors />
                 <Footer />
                 <ScrollToTopButton />
               </> 
-              } />
-            <Route path="/contactUs" element={
+           } />
+           <Route path="/contactUs" element={
               <>
                 <ContactUs />
                 <ContactUsBoomBoomPow />
                 <Footer />
                 <ScrollToTopButton />
               </> 
-              } />
+           } />
+           <Route path="/events" element={
+              <>
+                <EventsPage />
+                <Footer />
+                <ScrollToTopButton />
+              </> 
+           } />
          </Routes>
        </div>
      </Router>

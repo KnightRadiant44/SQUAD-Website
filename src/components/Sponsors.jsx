@@ -35,7 +35,7 @@ const Sponsors = () => {
                 <div className="flex justify-center">
                     <a href="https://www.citadelsecurities.com/" target="_blank" rel="noopener noreferrer">
                         <div className="w-[300px] h-[200px] sm:w-[60vw] sm:h-[30vh] md:w-[30vw] max-w-[400px] max-h-[200px] shadow-[0_4px_12px_rgba(205,127,50,0.5)] rounded-lg overflow-hidden mt-5 transition-transform duration-500 ease-in-out transform hover:scale-105 hover:shadow-[0_8px_16px_rgba(205,127,50,0.7)] hover:bg-[#f4e7d8]">
-                            <img src={require('./citadel.jpeg')} alt="Sponsor 4" className="w-full h-full object-cover" />
+                            <img src={require('./citadel.png')} alt="Sponsor 4" className="w-full h-full object-cover" />
                         </div>
                     </a>
                 </div>
