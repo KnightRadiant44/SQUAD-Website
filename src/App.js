@@ -15,6 +15,7 @@ import ContactUs from './components/contactUs/contactUs';
 import ContactUsBoomBoomPow from './components/contactUs/contactUsBoomBoomPow';
 import Aeda from './components/aeda';
 import EventsPage from './components/events/Events';
+import Project from './components/projects/Project';
 
 function App() {
    return (
@@ -56,6 +57,13 @@ function App() {
                 <ScrollToTopButton />
               </> 
            } />
+            <Route path="/projects" element={
+                <>
+                  <Project />
+                  <Footer />
+                  <ScrollToTopButton />
+                </> 
+            } />
          </Routes>
        </div>
      </Router>
