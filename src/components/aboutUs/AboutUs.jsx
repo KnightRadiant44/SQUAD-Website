@@ -22,7 +22,6 @@ const AboutUs = () => {
             time: 'March, 2024',
             event: <>SQUAD hosts Adelaide's <strong>first-ever</strong> datahon.</>        
         },
-        // Add more timeline data here
     ];
     return (
         <>
