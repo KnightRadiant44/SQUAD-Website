@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 function Navbar() {
   const [nav, setNav] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [dropdown, setDropdown] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const topRef = useRef(null);
 
@@ -17,11 +18,15 @@ function Navbar() {
     } else {
       document.body.style.overflow = 'auto';
     }
-  }
+  };
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
+  };
+
+  const toggleDropdown = () => {
+    setDropdown(!dropdown);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,9 +52,7 @@ function Navbar() {
           : 'shadow-[0_2px_6px_rgba(0,0,0,0.1)]'
       }`}
     >
-      <div
-        className="relative flex justify-between items-center h-16 max-w-1240 mx-auto px-4 text-white z-10"
-      >
+      <div className="relative flex justify-between items-center h-16 max-w-1240 mx-auto px-4 text-white z-10">
         <Link
           to="/"
           onClick={() => {
@@ -69,20 +72,49 @@ function Navbar() {
         </Link>
         <ul className="hidden md:flex space-x-4 text-[#000000] h-16 items-center">
           <li className="p-4 hover:text-gray-500">
-            <Link to="/" onClick={scrollToTop}>Home</Link>
+            <Link to="/" onClick={scrollToTop}>
+              Home
+            </Link>
           </li>
-          <li className="p-4 hover:text-gray-500">About Us</li>
-          <li className="p-4 hover:text-gray-500">
-            <Link to="/sponsors" onClick={scrollToTop}>Sponsors</Link>
+          <li className="group relative p-4 cursor-pointer hover:text-gray-500">
+            About Us
+            <ul className="absolute left-0 mt-2 p-2 space-y-2 text-gray-600 bg-white border border-gray-100 rounded-md opacity-0 group-hover:opacity-100 transition ease-in-out duration-300 invisible group-hover:visible">
+              <li className="p-2 hover:text-gray-500 cursor-pointer">
+              <Link to="/aboutus" onClick={scrollToTop}>
+                About Us
+                </Link>
+                </li>
+              <li className="p-2 hover:text-gray-500 cursor-pointer">
+              <Link to="/committee" onClick={scrollToTop}>
+                Committee
+              </Link>
+              </li>
+              <li className="p-2 hover:text-gray-500 cursor-pointer">
+                <a href="https://docs.google.com/document/d/1cGRZSPLtVQkT2oehVgj3cINVV_00U1vQ/edit?usp=sharing&ouid=103569585389417354715&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">
+                  Constitution
+                </a>
+              </li>
+            </ul>
           </li>
           <li className="p-4 hover:text-gray-500">
-            <Link to="/events" onClick={scrollToTop}>Events</Link>
+            <Link to="/sponsors" onClick={scrollToTop}>
+              Sponsors
+            </Link>
           </li>
           <li className="p-4 hover:text-gray-500">
-            <Link to="/projects" onClick={scrollToTop}>Projects</Link>
+            <Link to="/events" onClick={scrollToTop}>
+              Events
+            </Link>
           </li>
           <li className="p-4 hover:text-gray-500">
-            <Link to="/contactUs" onClick={scrollToTop}>Contact Us</Link>
+            <Link to="/projects" onClick={scrollToTop}>
+              Projects
+            </Link>
+          </li>
+          <li className="p-4 hover:text-gray-500">
+            <Link to="/contactUs" onClick={scrollToTop}>
+              Contact Us
+            </Link>
           </li>
         </ul>
         <div onClick={handleNav} className="block md:hidden">
@@ -103,7 +135,30 @@ function Navbar() {
                 Home
               </Link>
             </li>
-            <li className="p-4 hover:text-gray-500 border-b border-gray-200">About Us</li>
+            <li className="p-4 hover:text-gray-500 border-b border-gray-200">
+  <div onClick={() => {toggleDropdown(); }}>
+    About Us
+  </div>
+  {dropdown && (
+    <div className="flex space-x-2 mt-2 text-gray-600">
+      <div onClick={toggleDropdown} className="p-2 hover:text-gray-500 cursor-pointer">
+        <Link to="/aboutus" onClick={() => { handleNav(); scrollToTop(); }}>
+          About Us
+        </Link>
+      </div>
+      <div onClick={toggleDropdown} className="p-2 hover:text-gray-500 cursor-pointer">
+        <Link to="/committee" onClick={() => { handleNav(); scrollToTop(); }}>
+          Committee
+        </Link>
+      </div>
+      <div onClick={toggleDropdown} className="p-2 hover:text-gray-500 cursor-pointer">
+        <a href="https://docs.google.com/document/d/1cGRZSPLtVQkT2oehVgj3cINVV_00U1vQ/edit?usp=sharing&ouid=103569585389417354715&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" onClick={() => { handleNav(); scrollToTop(); }}>
+          Constitution
+        </a>
+      </div>
+    </div>
+  )}
+</li>
             <li className="p-4 hover:text-gray-500 border-b border-gray-200">
               <Link onClick={() => { handleNav(); scrollToTop(); }} to="/sponsors">
                 Sponsors
