@@ -3,6 +3,30 @@ import React from 'react';
 const Events = () => {
     return (
         <div id="Events" className="py-16 px-4 sm:px-6 lg:px-8 bg-[rgba(224,252,255)]">
+            <div className="flex flex-col md:flex-row justify-center items-center gap-20 md:px-8">
+                <div className="text-center text-2xl text-gray-500 float-effect mt-10">
+                    No upcoming events, keep an eye out for more!
+                </div>
+            </div>
+
+            <style jsx>{`
+                .float-effect {
+                    animation: float 3s ease-in-out infinite;
+                }
+
+                @keyframes float {
+                    0% {
+                        transform: translatey(0px);
+                    }
+                    50% {
+                        transform: translatey(-20px);
+                    }
+                    100% {
+                        transform: translatey(0px);
+                    }
+                }
+            `}</style>
+            {/*
             <div className="max-w-7xl mx-auto">
                 <div className="text-center">
                     <h2 className="text-3xl text-gray-900 sm:text-4xl">
@@ -28,6 +52,7 @@ const Events = () => {
                     </div>
                 </a>
             </div>
+            */}
         </div>
     );
 };

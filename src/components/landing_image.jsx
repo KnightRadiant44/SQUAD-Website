@@ -15,7 +15,7 @@ function Navbar() {
         <div
         className="absolute inset-0 w-full h-full bg-cover bg-center z-[-1]"
         style={{
-          backgroundImage: `url(${require('./test4.jpg')})`,
+          backgroundImage: `url(${require('./giphy.gif')})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -33,9 +33,11 @@ function Navbar() {
                 loop
               />
             </div>
-            <button className="bg-[#47B6FE] hover:bg-blue-900 text-white font-bold py-2 px-4 rounded-full mt-4 transition-all duration-300 ease-in-out transform hover:scale-110 mx-auto lg:mx-auto">
-              Join Us!
-            </button>
+            <a href="https://clubs.getqpay.com/?tab=memberships&s=8346" target="_blank" rel="noopener noreferrer">
+              <button className="bg-[#47B6FE] hover:bg-blue-900 text-white font-bold py-2 px-4 rounded-full mt-4 transition-all duration-300 ease-in-out transform hover:scale-110 mx-auto lg:mx-auto">
+                Join Us!
+              </button>
+            </a>
           </div>
         </div>
         <button

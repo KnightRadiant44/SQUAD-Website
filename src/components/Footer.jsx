@@ -29,7 +29,7 @@ const Footer = () => {
                     <a href="https://www.linkedin.com/company/squad-adelaide/" target="_blank" rel="noopener noreferrer" className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 xl:w-16 xl:h-16 max-w-[100px] max-h-[100px] shadow-md rounded-lg overflow-hidden transition-transform duration-500 ease-in-out transform hover:scale-105 hover:shadow-lg">
                         <img src={require('./ln.jpeg')} alt="Instagram" className="w-full h-full object-cover" /> 
                     </a>
-                    <a href="https://www.youtube.com/watch?v=mjD7V5s4h_M" target="_blank" rel="noopener noreferrer" className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 xl:w-16 xl:h-16 max-w-[100px] max-h-[100px] shadow-md rounded-lg overflow-hidden transition-transform duration-500 ease-in-out transform hover:scale-105 hover:shadow-lg">
+                    <a href="https://discord.com/invite/9ezxQrvAUf" target="_blank" rel="noopener noreferrer" className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 xl:w-16 xl:h-16 max-w-[100px] max-h-[100px] shadow-md rounded-lg overflow-hidden transition-transform duration-500 ease-in-out transform hover:scale-105 hover:shadow-lg">
                         <img src={require('./dis.jpeg')} alt="Instagram" className="w-full h-full object-cover" /> 
                     </a>
                 </div>
