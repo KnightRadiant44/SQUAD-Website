@@ -117,9 +117,11 @@ const Events = () => {
                 </div>
             </div>
             <div className="container mx-auto px-4 py-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="flex flex-wrap justify-center">
                     {past_events.map((past_event, index) => (
-                        <EventCard key={index} {...past_event} />
+                        <div className="w-full sm:w-full md:w-1/2 lg:w-1/3 p-2 flex justify-center">
+                            <EventCard key={index} {...past_event} />
+                        </div>
                     ))}
                 </div>
             </div>
