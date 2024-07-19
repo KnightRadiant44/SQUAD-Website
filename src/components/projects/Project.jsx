@@ -18,7 +18,7 @@ const Project = () => {
                     <div className="p-6">
                         <div className="flex items-center">
                             <h2 className="text-lg font-semibold mb-2">IMC Prosperity Github Repo</h2>
-                            <a href="https://github.com/your-repo" target="_blank" rel="noopener noreferrer" className="ml-2">
+                            <a href="https://github.com/sanchman21/imc-properity" target="_blank" rel="noopener noreferrer" className="ml-2">
                                 <FaGithub size={24} />
                             </a>
                         </div>
