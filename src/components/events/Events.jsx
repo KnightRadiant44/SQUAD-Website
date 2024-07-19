@@ -51,10 +51,10 @@ const EventCard = ({ title, description, instaLink, sponsors, collaborators }) =
 const Events = () => {
     const past_events = [
         {
-            title: 'Sudoku Party',
-            description: 'We hosted a thrilling Sudoku party where participants raced against the clock to solve puzzles and compete for the title of Ultimate Sudoku Champion. 🏆🧩',
-            instaLink: 'https://www.instagram.com/p/CwjWExKyqmO/',
-            collaborators: ['AUMS']
+            title: "Adelaide's First Datathon",
+            description: "🚀 Adelaide's first-ever Datathon was held! 🚀 Teams unleashed their analytical prowess and tackled challenges head-on. 🧠📊",
+            instaLink: 'https://www.instagram.com/p/C4vAdLVyFO3/',
+            sponsors: ['IMC', 'PWC', 'AEDA'],
         },
         {
             title: 'SQUAD Maths Olympiad',
@@ -63,10 +63,15 @@ const Events = () => {
             sponsors: ['IMC']
         },
         {
-            title: "Adelaide's First Datathon",
-            description: "🚀 Adelaide's first-ever Datathon was held! 🚀 Teams unleashed their analytical prowess and tackled challenges head-on. 🧠📊",
-            instaLink: 'https://www.instagram.com/p/C4vAdLVyFO3/',
-            sponsors: ['IMC', 'PWC', 'AEDA'],
+            title: 'Sudoku Party',
+            description: 'We hosted a thrilling Sudoku party where participants raced against the clock to solve puzzles and compete for the title of Ultimate Sudoku Champion. 🏆🧩',
+            instaLink: 'https://www.instagram.com/p/CwjWExKyqmO/',
+            collaborators: ['AUMS']
+        },
+        {
+            title: "Quantitative Trading Q/A Pannel",
+            description: "Our first event! Attendees joined the Q&A panel and learned all about quantitative trading from panelists coming from Optiver, IMC, Jane Street, Citadel Securities, Vivcourt, and Akuna Capital",
+            instaLink: 'https://www.instagram.com/p/CvwUF8SpNtc/',
         },
     ];
     return (
@@ -119,7 +124,7 @@ const Events = () => {
             <div className="container mx-auto px-4 py-8">
                 <div className="flex flex-wrap justify-center">
                     {past_events.map((past_event, index) => (
-                        <div className="w-full sm:w-full md:w-1/2 lg:w-1/3 p-2 flex justify-center">
+                        <div className="w-full sm:w-full md:w-1/2 lg:w-1/2 p-2 flex justify-center">
                             <EventCard key={index} {...past_event} />
                         </div>
                     ))}
