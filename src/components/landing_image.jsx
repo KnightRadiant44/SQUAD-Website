@@ -3,7 +3,6 @@ import { AiOutlineClose, AiOutlineMenu, AiOutlineArrowDown } from 'react-icons/a
 import { ReactTyped } from 'react-typed';
 import ScrollToTopButton from './ScrollToTopButton';
 
-
 function Navbar() {
 
   const scrollToNextSection = () => {
@@ -21,12 +20,12 @@ function Navbar() {
         }}
       />
       <div className="your-class-name"> 
-        <div className="max-w-[800px] mx-auto lg:mx-auto h-screen flex flex-col justify-center px-4 text-center lg:text-center">
+        <div className="max-w-[800px] lg:max-w-[1200px] mx-auto lg:mx-auto h-screen flex flex-col justify-center px-4 text-center lg:text-center">
           <div>
-            <p className="text-white text-3xl md:text-4xl lg:text-5xl">Welcome to the</p>
+            <p className="text-white text-3xl md:text-4xl lg:text-5xl xl:text-6xl">Welcome to the</p>
             <div className="flex items-center justify-center lg:justify-center">
               <ReactTyped
-                className="text-white font-bold text-5xl md:text-6xl lg:text-6xl"
+                className="text-white font-bold text-5xl md:text-6xl lg:text-6xl xl:text-7xl"
                 strings={['SQUAD', 'Society of Quantitative Analysis and Data']}
                 typeSpeed={70}
                 backSpeed={80}
