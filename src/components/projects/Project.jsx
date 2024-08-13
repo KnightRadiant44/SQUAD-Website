@@ -1,12 +1,17 @@
 import React from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { FaCode } from 'react-icons/fa';
+import { Helmet } from 'react-helmet-async';
+
 
 // color templates below at the end
 
 const Project = () => {
     return (
         <>
+         <Helmet>
+        <title>Projects</title>
+    </Helmet>
             <div className="pt-24 bg-[rgba(224,252,255)] flex flex-col items-start p-4 pl-12">
                 <h1 className="text-2xl mb-4 font-bold">Projects!</h1>
                 <p className="mb-4">

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { AiOutlineArrowUp } from 'react-icons/ai';
 
 const ScrollToTopButton = () => {
+
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {

@@ -12,6 +12,8 @@
     "boring-avatars": "^1.10.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-helmet-async": "^2.0.5",
     "react-icons": "^5.0.1",
     "react-intersection-observer": "^9.8.2",
     "react-router-dom": "^6.26.0",

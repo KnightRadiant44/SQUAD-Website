@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { AiOutlineClose, AiOutlineMenu, AiOutlineArrowDown } from 'react-icons/ai';
 import { ReactTyped } from 'react-typed';
 import ScrollToTopButton from './ScrollToTopButton';
+import { Helmet } from 'react-helmet-async';
+
 
 function Navbar() {
 
@@ -11,6 +13,9 @@ function Navbar() {
 
   return (
     <div className="relative h-screen">
+      <Helmet>
+        <title>Home Page</title>
+    </Helmet>
         <div
         className="absolute inset-0 w-full h-full bg-cover bg-center z-[-1]"
         style={{

@@ -1,8 +1,12 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const AboutUs = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-100 to-white">
+          <Helmet>
+            <title>About Us</title>
+          </Helmet>
       <div className="pt-24 bg-[rgba(224,252,255)] flex flex-col items-start p-4 pl-12">
                 <h1 className="text-2xl mb-4 font-bold">About Us!</h1>
                 <p className="mb-4">

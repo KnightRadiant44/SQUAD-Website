@@ -1,8 +1,12 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const ContactUs = () => {
     return (
         <div className="pt-24 bg-[rgba(224,252,255)] flex flex-col items-start p-4 pl-12">
+            <Helmet>
+        <title>Contact Us</title>
+    </Helmet>
             <h1 className="text-2xl mb-4 font-bold">Contact Us!</h1>
             <p className="mb-4">
                 Hi! If you have any inquiries regarding SQUAD or simply wish to learn more about us, don't hesitate to contact
