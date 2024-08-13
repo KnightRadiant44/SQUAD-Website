@@ -1,4 +1,5 @@
 import React from 'react';
+import Avatar from 'boring-avatars';
 
 const Committee = () => {
     return (
@@ -10,53 +11,51 @@ const Committee = () => {
                 </p>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 gap-y-6 gap-x-4 px-4 md:px-8 mb-20 mt-8 mx-auto">
-                <div className="flex flex-col items-center bg-white shadow-md p-4 rounded-lg max-w-sm mx-auto mt-8">
-                    <img className="w-24 h-24 rounded-full mb-4" src="https://source.unsplash.com/random/200x200" alt="Profile" />
-                    <h2 className="text-xl font-bold mb-2">John Doe</h2>
-                    <h3 className="text-lg text-gray-600 mb-2">Software Developer</h3>
+                <div className="flex flex-col items-center bg-white shadow-md p-4 rounded-lg w-80 h-auto md:h-92 mx-auto mt-8">
+                    <div className="w-36 h-36 rounded-full overflow-hidden">
+                        <img src={require('./pres.jpeg')} alt="Profile" className="w-full h-full object-cover object-center" />
+                    </div>
+                    <h2 className="text-xl font-bold mb-2">Khanh Nguyen</h2>
+                    <h3 className="text-lg text-gray-600 mb-2">President</h3>
                     <p className="text-gray-800 text-center">
-                         John is a software developer with over 5 years of experience in the industry. He specializes in front-end development.
+                        su-su-su-supernova
                     </p>
                 </div>
-                <div className="flex flex-col items-center bg-white shadow-md p-4 rounded-lg max-w-sm mx-auto mt-8">
-                    <img className="w-24 h-24 rounded-full mb-4" src="https://source.unsplash.com/random/200x200" alt="Profile" />
-                    <h2 className="text-xl font-bold mb-2">John Doe</h2>
-                    <h3 className="text-lg text-gray-600 mb-2">Software Developer</h3>
+                <div className="flex flex-col items-center bg-white shadow-md p-4 rounded-lg w-80 h-auto md:h-92 mx-auto mt-8">
+                    <div className="w-36 h-36 rounded-full overflow-hidden">
+                        <img src={require('./vp.png')} alt="Profile" className="w-full h-full object-cover object-center" />
+                    </div>
+                    <h2 className="text-xl font-bold mb-2">Michelle Nguyen</h2>
+                    <h3 className="text-lg text-gray-600 mb-2">Vice President</h3>
                     <p className="text-gray-800 text-center">
-                         John is a software developer with over 5 years of experience in the industry. He specializes in front-end development.
-                    </p>
+                    No one is born great, only those achieve greatness                     </p>
                 </div>
-                <div className="flex flex-col items-center bg-white shadow-md p-4 rounded-lg max-w-sm mx-auto mt-8">
-                    <img className="w-24 h-24 rounded-full mb-4" src="https://source.unsplash.com/random/200x200" alt="Profile" />
-                    <h2 className="text-xl font-bold mb-2">John Doe</h2>
-                    <h3 className="text-lg text-gray-600 mb-2">Software Developer</h3>
+                <div className="flex flex-col items-center bg-white shadow-md p-4 rounded-lg w-80 h-auto md:h-92 mx-auto mt-8">
+                    <div className="w-36 h-36 rounded-full overflow-hidden">
+                        <img src={require('./erm.jpg')} alt="Profile" className="w-full h-full object-cover object-center" />
+                    </div>
+                    <h2 className="text-xl font-bold mb-2">Farmaan Syed</h2>
+                    <h3 className="text-lg text-gray-600 mb-2">External Relations Manager</h3>
                     <p className="text-gray-800 text-center">
-                         John is a software developer with over 5 years of experience in the industry. He specializes in front-end development.
-                    </p>
+                    “I’m not superstitious, but I am a little stitious.” – Michael Scott                     </p>
                 </div>
-                <div className="flex flex-col items-center bg-white shadow-md p-4 rounded-lg max-w-sm mx-auto mt-8">
-                    <img className="w-24 h-24 rounded-full mb-4" src="https://source.unsplash.com/random/200x200" alt="Profile" />
-                    <h2 className="text-xl font-bold mb-2">John Doe</h2>
-                    <h3 className="text-lg text-gray-600 mb-2">Software Developer</h3>
+                <div className="flex flex-col items-center bg-white shadow-md p-4 rounded-lg w-80 h-auto md:h-92 mx-auto mt-8">
+                    <div className="w-36 h-36 rounded-full overflow-hidden">
+                        <img src={require('./pm.jpeg')} alt="Profile" className="w-full h-full object-cover object-center" />
+                    </div>
+                    <h2 className="text-xl font-bold mb-2">Sanchit Goel</h2>
+                    <h3 className="text-lg text-gray-600 mb-2">Projects Manager</h3>
                     <p className="text-gray-800 text-center">
-                         John is a software developer with over 5 years of experience in the industry. He specializes in front-end development.
-                    </p>
+                    It is happy hour somewhere                     </p>
                 </div>
-                <div className="flex flex-col items-center bg-white shadow-md p-4 rounded-lg max-w-sm mx-auto mt-8">
-                    <img className="w-24 h-24 rounded-full mb-4" src="https://source.unsplash.com/random/200x200" alt="Profile" />
-                    <h2 className="text-xl font-bold mb-2">John Doe</h2>
-                    <h3 className="text-lg text-gray-600 mb-2">Software Developer</h3>
+                <div className="flex flex-col items-center bg-white shadow-md p-4 rounded-lg w-80 h-auto md:h-92 mx-auto mt-8">
+                    <div className="w-36 h-36 rounded-full overflow-hidden">
+                        <img src={require('./meow.jpg')} alt="Profile" className="w-full h-full object-cover object-center" />
+                    </div>
+                    <h2 className="text-xl font-bold mb-2">Mahir N. Islam</h2>
+                    <h3 className="text-lg text-gray-600 mb-2">First-year Representative</h3>
                     <p className="text-gray-800 text-center">
-                         John is a software developer with over 5 years of experience in the industry. He specializes in front-end development.
-                    </p>
-                </div>
-                <div className="flex flex-col items-center bg-white shadow-md p-4 rounded-lg max-w-sm mx-auto mt-8">
-                    <img className="w-24 h-24 rounded-full mb-4" src="https://source.unsplash.com/random/200x200" alt="Profile" />
-                    <h2 className="text-xl font-bold mb-2">John Doe</h2>
-                    <h3 className="text-lg text-gray-600 mb-2">Software Developer</h3>
-                    <p className="text-gray-800 text-center">
-                         John is a software developer with over 5 years of experience in the industry. He specializes in front-end development.
-                    </p>
+                    Life before death, strength before weakness, journey before destination                     </p>
                 </div>
             </div>
         </>
