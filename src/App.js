@@ -15,6 +15,9 @@ import ContactUs from './components/contactUs/contactUs';
 import ContactUsBoomBoomPow from './components/contactUs/contactUsBoomBoomPow';
 import Aeda from './components/aeda';
 import EventsPage from './components/events/Events';
+import Project from './components/projects/Project';
+import Committee from './components/aboutUs/Committee';
+import AboutUs2 from './components/aboutUs/AboutUs';
 
 function App() {
    return (
@@ -56,6 +59,27 @@ function App() {
                 <ScrollToTopButton />
               </> 
            } />
+            <Route path="/projects" element={
+                <>
+                  <Project />
+                  <Footer />
+                  <ScrollToTopButton />
+                </> 
+            } />
+            <Route path="/committee" element={
+                <>
+                  <Committee />
+                  <Footer />
+                  <ScrollToTopButton />
+                </> 
+            } />
+            <Route path="/aboutus" element={
+                <>
+                  <AboutUs2 />
+                  <Footer />
+                  <ScrollToTopButton />
+                </> 
+            } />
          </Routes>
        </div>
      </Router>

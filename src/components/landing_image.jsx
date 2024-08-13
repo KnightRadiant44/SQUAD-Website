@@ -3,7 +3,6 @@ import { AiOutlineClose, AiOutlineMenu, AiOutlineArrowDown } from 'react-icons/a
 import { ReactTyped } from 'react-typed';
 import ScrollToTopButton from './ScrollToTopButton';
 
-
 function Navbar() {
 
   const scrollToNextSection = () => {
@@ -15,27 +14,29 @@ function Navbar() {
         <div
         className="absolute inset-0 w-full h-full bg-cover bg-center z-[-1]"
         style={{
-          backgroundImage: `url(${require('./test4.jpg')})`,
+          backgroundImage: `url(${require('./giphy.gif')})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       />
       <div className="your-class-name"> 
-        <div className="max-w-[800px] mx-auto lg:mx-auto h-screen flex flex-col justify-center px-4 text-center lg:text-center">
+        <div className="max-w-[800px] lg:max-w-[1200px] mx-auto lg:mx-auto h-screen flex flex-col justify-center px-4 text-center lg:text-center">
           <div>
-            <p className="text-white text-3xl md:text-4xl lg:text-5xl">Welcome to the</p>
+            <p className="text-white text-3xl md:text-4xl lg:text-5xl xl:text-6xl">Welcome to the</p>
             <div className="flex items-center justify-center lg:justify-center">
               <ReactTyped
-                className="text-white font-bold text-5xl md:text-6xl lg:text-6xl"
+                className="text-white font-bold text-5xl md:text-6xl lg:text-6xl xl:text-7xl"
                 strings={['SQUAD', 'Society of Quantitative Analysis and Data']}
                 typeSpeed={70}
                 backSpeed={80}
                 loop
               />
             </div>
-            <button className="bg-[#47B6FE] hover:bg-blue-900 text-white font-bold py-2 px-4 rounded-full mt-4 transition-all duration-300 ease-in-out transform hover:scale-110 mx-auto lg:mx-auto">
-              Join Us!
-            </button>
+            <a href="https://clubs.getqpay.com/?tab=memberships&s=8346" target="_blank" rel="noopener noreferrer">
+              <button className="bg-[#47B6FE] hover:bg-blue-900 text-white font-bold py-2 px-4 rounded-full mt-4 transition-all duration-300 ease-in-out transform hover:scale-110 mx-auto lg:mx-auto">
+                Join Us!
+              </button>
+            </a>
           </div>
         </div>
         <button

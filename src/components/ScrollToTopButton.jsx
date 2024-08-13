@@ -4,10 +4,9 @@ import { AiOutlineArrowUp } from 'react-icons/ai';
 const ScrollToTopButton = () => {
     const [isVisible, setIsVisible] = useState(false);
 
-    // Show button when page is scrolled down
     useEffect(() => {
         const toggleVisibility = () => {
-            if (window.pageYOffset > window.innerHeight) {
+            if (window.scrollY > window.innerHeight) {
                 setIsVisible(true);
             } else {
                 setIsVisible(false);
@@ -19,7 +18,6 @@ const ScrollToTopButton = () => {
         return () => window.removeEventListener('scroll', toggleVisibility);
     }, []);
 
-    // Scroll to top
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
