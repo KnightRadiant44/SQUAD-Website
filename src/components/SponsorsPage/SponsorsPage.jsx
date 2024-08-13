@@ -1,8 +1,13 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
 
 const SponsorsPage = () => {
     return (
         <div className="pt-24 bg-[rgba(224,252,255)] flex flex-col items-start p-4 pl-12">
+            <Helmet>
+        <title>Sponsors</title>
+    </Helmet>
             <h1 className="text-2xl mb-4 font-bold">Our Sponsors</h1>
             <p className="mb-4">
                 The Society of Quantitative Analysis and Data (SQUAD) owes its success to the invaluable partnerships forged 

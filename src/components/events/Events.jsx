@@ -1,4 +1,6 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
 
 const UpcomingEventCard = ({ title, description, nextSession, instaLink, sponsors, collaborators,location }) => (
     <div className="group bg-gradient-to-br from-white to-sky-100 rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 overflow-hidden relative">
@@ -152,6 +154,9 @@ const Events = () => {
     ];
     return (
         <>
+        <Helmet>
+        <title>Events</title>
+    </Helmet>
             <div className="pt-24 bg-[rgba(224,252,255)] flex flex-col items-start p-4 pl-12">
                 <h1 className="text-2xl mb-4 font-bold">Events!</h1>
                 <p className="mb-4">

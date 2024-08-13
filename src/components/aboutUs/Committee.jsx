@@ -1,9 +1,14 @@
 import React from 'react';
 import Avatar from 'boring-avatars';
+import { Helmet } from 'react-helmet-async';
+
 
 const Committee = () => {
     return (
         <>
+          <Helmet>
+        <title>Committee</title>
+    </Helmet>
             <div className="pt-24 bg-[rgba(224,252,255)] flex flex-col items-start p-4 pl-12">
                 <h1 className="text-2xl mb-4 font-bold">Meet the team!</h1>
                 <p className="mb-4">
