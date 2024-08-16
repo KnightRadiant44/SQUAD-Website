@@ -64,10 +64,11 @@ const EventCard = ({ title, description, nextSession, instaLink, sponsors, colla
 const Events = () => {
     const past_events = [
         {
-            title: "Daily Quant Sessions",
+            title: "Weekly Quant Sessions",
             description: "Want to land a top quant internship? Join SQUAD's weekly program! Master interview skills, tackle tough problems, and network with industry pros from leading Quant Finance Firms! 🚀📈",
-            nextSession: 'August 15, 2024. 5:00 PM - 6:00PM.',
-            location: 'Barr Smith South 2052',
+            nextSession: 'TBD',
+            location: 'TBD',
+            instaLink: 'https://www.instagram.com/p/C-l9x-Uy_Ri/',
             sponsors: ['Optiver', 'IMC', 'Citadel', 'Vivcourt'],
         },
         {

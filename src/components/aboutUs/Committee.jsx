@@ -31,9 +31,18 @@ const Committee = () => {
                         <img src={require('./vp.png')} alt="Profile" className="w-full h-full object-cover object-center" />
                     </div>
                     <h2 className="text-xl font-bold mb-2">Michelle Nguyen</h2>
-                    <h3 className="text-lg text-gray-600 mb-2">Vice President</h3>
+                    <h3 className="text-lg text-gray-600 mb-2">Vice President (Data Science)</h3>
                     <p className="text-gray-800 text-center">
                     No one is born great, only those achieve greatness                     </p>
+                </div>
+                <div className="flex flex-col items-center bg-white shadow-lg p-4 rounded-lg w-80 h-auto md:h-92 mx-auto mt-8">
+                    <div className="w-36 h-36 rounded-full overflow-hidden">
+                        <img src={require('./vp_quant.jpeg')} alt="Profile" className="w-full h-full object-cover object-center" />
+                    </div>
+                    <h2 className="text-xl font-bold mb-2">Ognjen (Oggy) Stankovic</h2>
+                    <h3 className="text-lg text-gray-600 mb-2">Vice President (Quant) </h3>
+                    <p className="text-gray-800 text-center">
+                    Buy low Sell high                     </p>
                 </div>
                 <div className="flex flex-col items-center bg-white shadow-lg p-4 rounded-lg w-80 h-auto md:h-92 mx-auto mt-8">
                     <div className="w-36 h-36 rounded-full overflow-hidden">
@@ -52,6 +61,33 @@ const Committee = () => {
                     <h3 className="text-lg text-gray-600 mb-2">Projects Manager</h3>
                     <p className="text-gray-800 text-center">
                     It is happy hour somewhere                     </p>
+                </div>
+                <div className="flex flex-col items-center bg-white shadow-lg p-4 rounded-lg w-80 h-auto md:h-92 mx-auto mt-8">
+                    <div className="w-36 h-36 rounded-full overflow-hidden">
+                        <img src={require('./em.jpg')} alt="Profile" className="w-full h-full object-cover object-center" />
+                    </div>
+                    <h2 className="text-xl font-bold mb-2">Elvis Tran</h2>
+                    <h3 className="text-lg text-gray-600 mb-2">Event Officer </h3>
+                    <p className="text-gray-800 text-center">
+                    "Debugging is like being the detective in a crime movie where you are also the murderer." - Filipe Fortes                     </p>
+                </div>
+                <div className="flex flex-col items-center bg-white shadow-lg p-4 rounded-lg w-80 h-auto md:h-92 mx-auto mt-8">
+                    <div className="w-36 h-36 rounded-full overflow-hidden">
+                        <img src={require('./socmed2.PNG')} alt="Profile" className="w-full h-full object-cover object-center" />
+                    </div>
+                    <h2 className="text-xl font-bold mb-2">Anne Yeung</h2>
+                    <h3 className="text-lg text-gray-600 mb-2">Social Media Officer</h3>
+                    <p className="text-gray-800 text-center">
+                    MATH = Mental Abuse To Humans                  </p>
+                </div>
+                <div className="flex flex-col items-center bg-white shadow-lg p-4 rounded-lg w-80 h-auto md:h-92 mx-auto mt-8">
+                    <div className="w-36 h-36 rounded-full overflow-hidden">
+                        <img src={require('./socmed1.jpeg')} alt="Profile" className="w-full h-full object-cover object-center" />
+                    </div>
+                    <h2 className="text-xl font-bold mb-2">Alex (Ngoc-Bich) Nguyen</h2>
+                    <h3 className="text-lg text-gray-600 mb-2">Social Media Officer</h3>
+                    <p className="text-gray-800 text-center">
+                    A low-key introvert data analyst who is addicted to social media 🤖                  </p>
                 </div>
                 <div className="flex flex-col items-center bg-white shadow-lg p-4 rounded-lg w-80 h-auto md:h-92 mx-auto mt-8">
                     <div className="w-36 h-36 rounded-full overflow-hidden">

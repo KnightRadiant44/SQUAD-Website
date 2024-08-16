@@ -33,7 +33,6 @@ function App() {
                <AboutUs />
                <Events />
                <Sponsors />
-               <Aeda />
                <Footer />
                <ScrollToTopButton />
              </>
