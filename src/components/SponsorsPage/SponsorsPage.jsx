@@ -20,7 +20,7 @@ const SponsorsPage = () => {
                 steadfast backing from our esteemed industry partners.
             </p>
             <p className='font-bold'>
-                Interested in sponsoring? Reach out to someemail@gmail.com.
+                Interested in sponsoring? Reach out to squad@clubs.youx.org.au.
             </p>
         </div>
     );
