@@ -129,7 +129,7 @@ const Events = () => {
         {
             title: 'Data Science Panel',
             description: "🧐Curious about a career in Data Science research? Come along to SQUAD’s Data Science Academia Panel! 🧠📖✏️ You’ll get to hear from a few guest speakers working in academia, followed by Q&A, then some networking with drinks and nibbles",
-            date: 'August 29, 2024',
+            date: 'August 29, 2024, 5:00PM - 6:30PM',
             location: 'TBD',
             instaLink: 'https://www.instagram.com/p/C-7C_dUSZNW/',
         },
