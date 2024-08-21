@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const EventCard = ({ title, description, nextSession, instaLink, sponsors, collaborators,location }) => (
+const EventCard = ({ title, description, nextSession, date, instaLink, sponsors, collaborators,location }) => (
     <div className="group bg-gradient-to-br from-white to-sky-100 rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 overflow-hidden relative">
         <div className="absolute inset-0 bg-gradient-to-r from-sky-200 to-blue-200 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
         <h3 className="text-xl font-semibold mb-4 text-gray-800 group-hover:text-indigo-700 transition-colors duration-300">{title}</h3>
@@ -11,7 +11,13 @@ const EventCard = ({ title, description, nextSession, instaLink, sponsors, colla
 
         {nextSession && (
             <p className="text-gray-600 text-bold group-hover:text-gray-800 transition-colors duration-300 mb-4">
-                <strong>Date:</strong> {nextSession}
+                <strong>Next Session:</strong> {nextSession}
+            </p>
+        )}
+
+        {date && (
+            <p className="text-gray-600 text-bold group-hover:text-gray-800 transition-colors duration-300 mb-4">
+                <strong>Date:</strong> {date}
             </p>
         )}
 
@@ -66,17 +72,17 @@ const Events = () => {
         {
             title: "Weekly Quant Sessions",
             description: "Want to land a top quant internship? Join SQUAD's weekly program! Master interview skills, tackle tough problems, and network with industry pros from leading Quant Finance Firms! 🚀📈",
-            nextSession: 'TBD',
+            nextSession: 'August 26, 2024, 5:30PM - 7:00PM',
             location: 'TBD',
             instaLink: 'https://www.instagram.com/p/C-l9x-Uy_Ri/',
             sponsors: ['Optiver', 'IMC', 'Citadel', 'Vivcourt'],
         },
         {
-            title: 'Quant Q/A Panel',
-            description: "Join us for our inaugural event! Attend our upcoming Q&A panel to learn all about quantitative trading from expert panelists representing Optiver, IMC, Jane Street, Citadel Securities, Vivcourt, and Akuna Capital. Don't miss this opportunity to gain insights from industry leaders!",
-            nextSession: 'TBD',
+            title: 'Data Science Panel',
+            description: "🧐Curious about a career in Data Science research? Come along to SQUAD’s Data Science Academia Panel! 🧠📖✏️ You’ll get to hear from a few guest speakers working in academia, followed by Q&A, then some networking with drinks and nibbles",
+            date: 'August 29, 2024',
             location: 'TBD',
-            sponsors: ['Optiver', 'IMC', 'Citadel', 'Vivcourt']
+            instaLink: 'https://www.instagram.com/p/C-7C_dUSZNW/',
         },
     ];
     const handleClick = () => {
