@@ -74,14 +74,14 @@ const Events = () => {
             description: "Want to land a top quant internship? Join SQUAD's weekly program! Master interview skills, tackle tough problems, and network with industry pros from leading Quant Finance Firms! 🚀📈",
             nextSession: 'August 26, 2024, 5:30PM - 7:00PM',
             location: 'TBD',
-            instaLink: 'https://www.instagram.com/p/C-l9x-Uy_Ri/',
+            instaLink: 'https://www.instagram.com/p/C-81bIeSOm2/',
             sponsors: ['Optiver', 'IMC', 'Citadel', 'Vivcourt'],
         },
         {
             title: 'Data Science Panel',
             description: "🧐Curious about a career in Data Science research? Come along to SQUAD’s Data Science Academia Panel! 🧠📖✏️ You’ll get to hear from a few guest speakers working in academia, followed by Q&A, then some networking with drinks and nibbles",
             date: 'August 29, 2024, 5:00PM - 6:30PM',
-            location: 'TBD',
+            location: 'Ligertwood 333 Lecture Theatre',
             instaLink: 'https://www.instagram.com/p/C-7C_dUSZNW/',
         },
     ];
