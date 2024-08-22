@@ -73,7 +73,7 @@ const Events = () => {
             title: "Weekly Quant Sessions",
             description: "Want to land a top quant internship? Join SQUAD's weekly program! Master interview skills, tackle tough problems, and network with industry pros from leading Quant Finance Firms! 🚀📈",
             nextSession: 'August 26, 2024, 5:30PM - 7:00PM',
-            location: 'TBD',
+            location: 'Barr Smith South 2052',
             instaLink: 'https://www.instagram.com/p/C-81bIeSOm2/',
             sponsors: ['Optiver', 'IMC', 'Citadel', 'Vivcourt'],
         },
