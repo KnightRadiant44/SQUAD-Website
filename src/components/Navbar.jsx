@@ -152,7 +152,7 @@ function Navbar() {
                     </Link>
                   </div>
                   <div onClick={toggleDropdown} className="p-2 hover:text-gray-500 cursor-pointer">
-                    <a href="https://docs.google.com/document/d/1yXM0eBz1PXRFu4ySwpKtb5lOX7xt-5jF/edit?usp=sharing&ouid=103569585389417354715&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" onClick={() => { handleNav(); scrollToTop(); }}>
+                    <a href="https://docs.google.com/document/d/1yXM0eBz1PXRFu4ySwpKtb5lOX7xt-5jF/edit?usp=drive_link&ouid=103569585389417354715&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" onClick={() => { handleNav(); scrollToTop(); }}>
                       Constitution
                     </a>
                   </div>
