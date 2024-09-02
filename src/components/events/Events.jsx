@@ -127,13 +127,6 @@ const Events = () => {
             sponsors: ['Optiver', 'IMC', 'Citadel', 'Vivcourt'],
         },
         {
-            title: 'Data Science Panel',
-            description: "🧐Curious about a career in Data Science research? Come along to SQUAD’s Data Science Academia Panel! 🧠📖✏️ You’ll get to hear from a few guest speakers working in academia, followed by Q&A, then some networking with drinks and nibbles",
-            date: 'August 29, 2024, 5:00PM - 6:30PM',
-            location: 'Ligertwood 333 Lecture Theatre',
-            instaLink: 'https://www.instagram.com/p/C-7C_dUSZNW/',
-        },
-        {
             title: 'Quant Trading Q/A Panel',
             description: "Join us for our inaugural event! Attend our upcoming Q&A panel to learn all about quantitative trading from expert panelists representing Optiver, IMC, Jane Street, Citadel Securities, Vivcourt, and Akuna Capital. Don't miss this opportunity to gain insights from industry leaders!",
             date: 'TBD',
@@ -142,6 +135,13 @@ const Events = () => {
         },
     ];
     const past_events = [
+        {
+            title: 'Data Science Panel',
+            description: "🧐Curious about a career in Data Science research? Come along to SQUAD’s Data Science Academia Panel! 🧠📖✏️ You’ll get to hear from a few guest speakers working in academia, followed by Q&A, then some networking with drinks and nibbles",
+            date: 'August 29, 2024, 5:00PM - 6:30PM',
+            location: 'Ligertwood 333 Lecture Theatre',
+            instaLink: 'https://www.instagram.com/p/C-7C_dUSZNW/',
+        },
         {
             title: "Adelaide's First Datathon",
             description: "🚀 Adelaide's first-ever Datathon was held! 🚀 Teams unleashed their analytical prowess and tackled challenges head-on. 🧠📊",
