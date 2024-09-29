@@ -117,11 +117,46 @@ const EventCard = ({ title, description, instaLink, sponsors, collaborators }) =
 );
 
 const Events = () => {
+    // Constant for manual date override. Set to null when using automatic calculation.
+    // Format: "YYYY-MM-DD HH:MM" (24-hour format)
+    // Example: "2024-10-07 17:30" for October 7, 2024 at 5:30 PM
+    const MANUAL_OVERRIDE_DATE = "2024-10-14 17:30"; // Change this when you need to override
+
+    // Function to get the next Monday's date
+    const getNextMonday = () => {
+        const today = new Date();
+        const nextMonday = new Date(today);
+        nextMonday.setDate(today.getDate() + ((7 - today.getDay() + 1) % 7 || 7));
+        nextMonday.setHours(17, 30, 0, 0); // Set time to 5:30 PM
+        return nextMonday;
+    };
+
+    // Function to format the date
+    const formatDate = (date) => {
+        const options = { 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric', 
+            hour: 'numeric', 
+            minute: 'numeric', 
+            hour12: true 
+        };
+        return date.toLocaleDateString('en-US', options);
+    };
+
+    // Function to get the next session date (either manual override or next Monday)
+    const getNextSessionDate = () => {
+        if (MANUAL_OVERRIDE_DATE) {
+            return formatDate(new Date(MANUAL_OVERRIDE_DATE));
+        }
+        return formatDate(getNextMonday());
+    };
+
     const upcoming_events = [
         {
             title: "Weekly Quant Sessions",
             description: "Want to land a top quant internship? Join SQUAD's weekly program! Master interview skills, tackle tough problems, and network with industry pros from leading Quant Finance Firms! 🚀📈",
-            nextSession: 'August 26, 2024, 5:30PM - 7:00PM',
+            nextSession: getNextSessionDate(),
             location: 'Barr Smith South 2052',
             instaLink: 'https://www.instagram.com/p/C-81bIeSOm2/',
             sponsors: ['Optiver', 'IMC', 'Citadel', 'Vivcourt'],
