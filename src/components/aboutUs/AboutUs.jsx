@@ -1,52 +1,83 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { FaChartLine, FaUsers, FaLightbulb, FaGraduationCap, FaHandsHelping, FaBriefcase } from 'react-icons/fa';
 
 const AboutUs = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-100 to-white">
-          <Helmet>
-            <title>About Us</title>
-          </Helmet>
-      <div className="pt-24 bg-[rgba(224,252,255)] flex flex-col items-start p-4 pl-12">
-                <h1 className="text-2xl mb-4 font-bold">About Us!</h1>
-                <p className="mb-4">
-                Get to know the values, mission, and history of SQUAD. Find out what we stand for and how we aim to help students grow and develop their skills!
-                </p>
+    <>
+      <Helmet>
+        <title>About Us | SQUAD</title>
+      </Helmet>
+      <div className="bg-[rgba(224,252,255)] w-full">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 pt-24 pb-12">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-gray-900">About SQUAD</h1>
+          <div className="lg:pr-12 xl:pr-24">
+            <p className="text-lg lg:text-xl mb-4 text-gray-700">
+              SQUAD (Society for Quantitative Analysis and Data) is a student-led organization dedicated to fostering excellence in data science and quantitative finance. We aim to bridge the gap between academic learning and industry applications, providing students with the tools, knowledge, and network to thrive in these dynamic fields.
+            </p>
+          </div>
         </div>
+      </div>
 
-        <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 py-16">
         <section className="mb-20">
-
-          <h2 className="text-3xl text-gray-900 sm:text-4xl mb-8 text-center">Our Goals</h2>
-          <div className="bg-white rounded-lg shadow-lg p-8 space-y-6">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-gray-900 text-center">Our Mission</h2>
+          <div className="grid sm:grid-cols-1 lg:grid-cols-3 gap-8">
             {[
-              "In South Australia, SQUAD strives to be the top student-led organization that helps students achieve their goals in data science and quantitative finance careers.",
-              "We actively support students in their journey. By hosting information sessions, networking events, and other career-focused activities, we equip them with the knowledge and connections to navigate their studies and future careers in data science and quantitative finance.",
-              "At the University of Adelaide, we cultivate a diverse data science and quant community. Through fun social events and activities, we connect students who share a passion for the field.",
-              "SQUAD empowers students to excel. We host competitions that test your skills and networking events that connect you with fellow students and industry professionals."
-            ].map((goal, index) => (
-              <div key={index} className="flex items-start">
-                <div className="flex-shrink-0 mt-1">
-                  <svg className="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
+              {
+                icon: <FaChartLine className="w-16 h-16 text-blue-500 mb-4" />,
+                title: "Excel in Data & Quant",
+                description: "Empower students with cutting-edge skills in data science and quantitative finance."
+              },
+              {
+                icon: <FaUsers className="w-16 h-16 text-green-500 mb-4" />,
+                title: "Build Community",
+                description: "Foster a vibrant network of like-minded individuals passionate about data and analysis."
+              },
+              {
+                icon: <FaLightbulb className="w-16 h-16 text-yellow-500 mb-4" />,
+                title: "Bridge Academia & Industry",
+                description: "Connect academic learning with real-world applications through hands-on experiences."
+              }
+            ].map((item, index) => (
+              <div key={index} className="bg-white p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+                <div className="flex justify-center items-center mb-4">
+                  {item.icon}
                 </div>
-                <p className="ml-4 text-gray-700">{goal}</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">{item.title}</h3>
+                <p className="text-gray-700">{item.description}</p>
               </div>
             ))}
           </div>
         </section>
 
         <section className="mb-20">
-          <h2 className="text-3xl text-gray-900 sm:text-4xl mb-8 text-center">Our Values</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-gray-900 text-center">Our Values</h2>
+          <div className="grid sm:grid-cols-1 lg:grid-cols-3 gap-8">
             {[
-              { title: "Embrace lifelong learning", description: "Push boundaries! Innovative experiences. Solve problems. Be an active learner." },
-              { title: "Learn lots and have fun!", description: "SQUAD: Where knowledge meets friendship! We offer enriching experiences that leave you feeling positive and ready to take the next step in your journey." },
-              { title: "Pursue your passion", description: "The SQUAD's strength lies in its diversity and the shared passion of its members. We bring a range of expertise to the table, but it's our unwavering enthusiasm and collaborative spirit that truly sets us apart." }
+              {
+                icon: <FaGraduationCap className="w-12 h-12 text-blue-500" />,
+                title: "Continuous Learning",
+                description: "Embrace lifelong learning and stay at the forefront of technological advancements."
+              },
+              {
+                icon: <FaHandsHelping className="w-12 h-12 text-green-500" />,
+                title: "Collaborative Growth",
+                description: "Learn from each other, share experiences, and grow together as a community."
+              },
+              {
+                icon: <FaBriefcase className="w-12 h-12 text-purple-500" />,
+                title: "Industry Relevance",
+                description: "Prepare for real-world challenges by bridging academia and industry."
+              }
             ].map((value, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-lg border-t-4 border-blue-400 hover:shadow-xl transition-shadow duration-300">
-                <h3 className="text-xl font-semibold text-black-600 mb-4">{value.title}</h3>
+              <div key={index} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-t-4 border-blue-500">
+                <div className="flex items-center mb-4">
+                  <div className="bg-gray-100 p-3 rounded-full mr-4">
+                    {value.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900">{value.title}</h3>
+                </div>
                 <p className="text-gray-700">{value.description}</p>
               </div>
             ))}
@@ -54,28 +85,28 @@ const AboutUs = () => {
         </section>
 
         <section>
-          <h2 className="text-3xl text-gray-900 sm:text-4xl mb-8 text-center">Our History</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-gray-900 text-center">Our Journey</h2>
           <div className="space-y-8">
             {[
-              { date: 'July, 2023', event: 'SQUAD was founded by a group of students who wanted to create a community for data science and quantitative finance enthusiasts.' },
-              { date: 'August, 2023', event: 'SQUAD hosts its first quantitative trading Q/A Panel.' },
-              { date: 'September, 2023', event: "SQUAD's first collaboration with another club and a fun Sudoku Party!" },
-              { date: 'March, 2024', event: 'SQUAD hosts the maths olympiad in collaboration with IMC.' },
-              { date: 'March, 2024', event: "SQUAD hosts Adelaide's first-ever datahon." },
+              { date: 'July 2023', event: 'SQUAD is founded by passionate students' },
+              { date: 'August 2023', event: 'Inaugural Quantitative Trading Q&A Panel' },
+              { date: 'September 2023', event: "First inter-club collaboration: Sudoku Party" },
+              { date: 'March 2024', event: 'Mathematics Olympiad in collaboration with IMC' },
+              { date: 'March 2024', event: "Adelaide's first-ever Datathon" },
             ].map((item, index) => (
-              <div key={index} className="flex items-center bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow duration-300">
-                <div className="w-32 flex-shrink-0">
+              <div key={index} className="flex flex-col sm:flex-row items-start sm:items-center bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300 transform hover:-translate-x-1">
+                <div className="w-full sm:w-32 flex-shrink-0 mb-2 sm:mb-0">
                   <span className="text-blue-600 font-semibold">{item.date}</span>
                 </div>
-                <div className="flex-grow pl-4 border-l-2 border-blue-200">
-                  <p className="text-gray-700">{item.event}</p>
+                <div className="flex-grow pl-0 sm:pl-6 border-l-0 sm:border-l-2 border-blue-200">
+                  <p className="text-gray-700 text-lg">{item.event}</p>
                 </div>
               </div>
             ))}
           </div>
         </section>
       </div>
-    </div>
+    </>
   );
 };
 

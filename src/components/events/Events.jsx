@@ -203,72 +203,44 @@ const Events = () => {
     ];
     return (
         <>
-        <Helmet>
-        <title>Events</title>
-    </Helmet>
-            <div className="pt-24 bg-[rgba(224,252,255)] flex flex-col items-start p-4 pl-12">
-                <h1 className="text-2xl mb-4 font-bold">Events!</h1>
-                <p className="mb-4">
-                    Keep yourself informed about the various activities we offer, including social gatherings, skill-building
-                    workshops, and chances to expand your professional network.
-                </p>
+            <Helmet>
+                <title>Events</title>
+            </Helmet>
+            <div className="bg-[rgba(224,252,255)] w-full">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 pt-24 pb-12">
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-gray-900">Events!</h1>
+                    <div className="lg:pr-12 xl:pr-24">
+                        <p className="text-lg lg:text-xl mb-4 text-gray-700">
+                            Keep yourself informed about the various activities we offer, including social gatherings, skill-building
+                            workshops, and chances to expand your professional network.
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div className="max-w-7xl mx-auto mt-16">
-                <div className="text-center">
-                    <h2 className="text-3xl text-gray-900 sm:text-4xl">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 py-16">
+                <div className="text-center mb-12">
+                    <h2 className="text-3xl sm:text-4xl text-gray-900 font-bold">
                         Upcoming Events
                     </h2>
                 </div>
-            </div>
-            <div className="container mx-auto px-4 py-8">
-                <div className="flex flex-wrap justify-center">
-                    {upcoming_events.map((upcoming_events, index) => (
-                        <div className="w-full sm:w-full md:w-1/2 lg:w-1/2 p-2 flex justify-center">
-                            <UpcomingEventCard key={index} {...upcoming_events} />
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    {upcoming_events.map((event, index) => (
+                        <div key={index} className="flex justify-center">
+                            <UpcomingEventCard {...event} />
                         </div>
                     ))}
                 </div>
             </div>
-            {
-    /* 
-    <div className="flex flex-col md:flex-row justify-center items-center gap-20 md:px-8">
-        <div className="text-center text-2xl text-gray-500 float-effect mt-10">
-            No upcoming events, keep an eye out for more!
-        </div>
-    </div>
-
-    <style jsx>{`
-        .float-effect {
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0% {
-                transform: translatey(0px);
-            }
-            50% {
-                transform: translatey(-20px);
-            }
-            100% {
-                transform: translatey(0px);
-            }
-        }
-    `}</style>
-    */
-}
-
-            <div className="max-w-7xl mx-auto mt-16">
-                <div className="text-center">
-                    <h2 className="text-3xl text-gray-900 sm:text-4xl">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 py-16">
+                <div className="text-center mb-12">
+                    <h2 className="text-3xl sm:text-4xl text-gray-900 font-bold">
                         Past Events
                     </h2>
                 </div>
-            </div>
-            <div className="container mx-auto px-4 py-8">
-                <div className="flex flex-wrap justify-center">
-                    {past_events.map((past_event, index) => (
-                        <div className="w-full sm:w-full md:w-1/2 lg:w-1/2 p-2 flex justify-center">
-                            <EventCard key={index} {...past_event} />
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    {past_events.map((event, index) => (
+                        <div key={index} className="flex justify-center">
+                            <EventCard {...event} />
                         </div>
                     ))}
                 </div>

@@ -1,102 +1,95 @@
 import React from 'react';
-import Avatar from 'boring-avatars';
 import { Helmet } from 'react-helmet-async';
 
+const TeamMemberCard = ({ name, role, quote, imageSrc }) => (
+    <div className="flex flex-col items-center bg-white shadow-lg p-4 rounded-lg w-full h-auto">
+        <div className="w-36 h-36 rounded-full overflow-hidden mb-4">
+            <img src={imageSrc} alt={`${name}'s profile`} className="w-full h-full object-cover object-center" />
+        </div>
+        <h2 className="text-xl font-bold mb-2">{name}</h2>
+        <h3 className="text-lg text-gray-600 mb-2">{role}</h3>
+        <p className="text-gray-800 text-center">{quote}</p>
+    </div>
+);
 
 const Committee = () => {
+    const teamMembers = [
+        {
+            name: "Khanh Nguyen",
+            role: "President",
+            quote: "su-su-su-supernova",
+            imageSrc: require('./pres.jpeg')
+        },
+        {
+            name: "Michelle Nguyen",
+            role: "Vice President (Data Science)",
+            quote: "No one is born great, only those achieve greatness",
+            imageSrc: require('./vp.png')
+        },
+        {
+            name: "Ognjen (Oggy) Stankovic",
+            role: "Vice President (Quant)",
+            quote: "Buy low Sell high",
+            imageSrc: require('./vp_quant.jpeg')
+        },
+        {
+            name: "Farmaan Syed",
+            role: "External Relations Manager",
+            quote: '"I\'m not superstitious, but I am a little stitious." – Michael Scott',
+            imageSrc: require('./erm.jpg')
+        },
+        {
+            name: "Sanchit Goel",
+            role: "Projects Manager",
+            quote: "It is happy hour somewhere",
+            imageSrc: require('./pm.jpeg')
+        },
+        {
+            name: "Elvis Tran",
+            role: "Event Officer",
+            quote: '"Debugging is like being the detective in a crime movie where you are also the murderer." - Filipe Fortes',
+            imageSrc: require('./em.jpg')
+        },
+        {
+            name: "Anne Yeung",
+            role: "Social Media Officer",
+            quote: "MATH = Mental Abuse To Humans",
+            imageSrc: require('./socmed2.PNG')
+        },
+        {
+            name: "Alex (Ngoc-Bich) Nguyen",
+            role: "Social Media Officer",
+            quote: "A low-key introvert data analyst who is addicted to social media 🤖",
+            imageSrc: require('./socmed1.jpeg')
+        },
+        {
+            name: "Mahir N. Islam",
+            role: "First-year Representative",
+            quote: "Life before death, strength before weakness, journey before destination",
+            imageSrc: require('./meow.jpg')
+        }
+    ];
+
     return (
         <>
-          <Helmet>
-        <title>Committee</title>
-    </Helmet>
-            <div className="pt-24 bg-[rgba(224,252,255)] flex flex-col items-start p-4 pl-12">
-                <h1 className="text-2xl mb-4 font-bold">Meet the team!</h1>
-                <p className="mb-4">
-                    Get to know the SQUAD team, whose mission is to foster new avenues for students to network, develop their skills, and receive the encouragement they need!
-                </p>
+            <Helmet>
+                <title>Committee</title>
+            </Helmet>
+            <div className="bg-[rgba(224,252,255)] w-full">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 pt-24 pb-12">
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-gray-900">Meet the Team!</h1>
+                    <div className="lg:pr-12 xl:pr-24">
+                        <p className="text-lg lg:text-xl mb-4 text-gray-700">
+                            Get to know the SQUAD team, whose mission is to foster new avenues for students to network, develop their skills, and receive the encouragement they need!
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-y-6 gap-x-4 px-4 md:px-8 mb-20 mt-8 mx-auto">
-                <div className="flex flex-col items-center bg-white shadow-lg p-4 rounded-lg w-80 h-auto md:h-92 mx-auto mt-8">
-                    <div className="w-36 h-36 rounded-full overflow-hidden">
-                        <img src={require('./pres.jpeg')} alt="Profile" className="w-full h-full object-cover object-center" />
-                    </div>
-                    <h2 className="text-xl font-bold mb-2">Khanh Nguyen</h2>
-                    <h3 className="text-lg text-gray-600 mb-2">President</h3>
-                    <p className="text-gray-800 text-center">
-                        su-su-su-supernova
-                    </p>
-                </div>
-                <div className="flex flex-col items-center bg-white shadow-lg p-4 rounded-lg w-80 h-auto md:h-92 mx-auto mt-8">
-                    <div className="w-36 h-36 rounded-full overflow-hidden">
-                        <img src={require('./vp.png')} alt="Profile" className="w-full h-full object-cover object-center" />
-                    </div>
-                    <h2 className="text-xl font-bold mb-2">Michelle Nguyen</h2>
-                    <h3 className="text-lg text-gray-600 mb-2">Vice President (Data Science)</h3>
-                    <p className="text-gray-800 text-center">
-                    No one is born great, only those achieve greatness                     </p>
-                </div>
-                <div className="flex flex-col items-center bg-white shadow-lg p-4 rounded-lg w-80 h-auto md:h-92 mx-auto mt-8">
-                    <div className="w-36 h-36 rounded-full overflow-hidden">
-                        <img src={require('./vp_quant.jpeg')} alt="Profile" className="w-full h-full object-cover object-center" />
-                    </div>
-                    <h2 className="text-xl font-bold mb-2">Ognjen (Oggy) Stankovic</h2>
-                    <h3 className="text-lg text-gray-600 mb-2">Vice President (Quant) </h3>
-                    <p className="text-gray-800 text-center">
-                    Buy low Sell high                     </p>
-                </div>
-                <div className="flex flex-col items-center bg-white shadow-lg p-4 rounded-lg w-80 h-auto md:h-92 mx-auto mt-8">
-                    <div className="w-36 h-36 rounded-full overflow-hidden">
-                        <img src={require('./erm.jpg')} alt="Profile" className="w-full h-full object-cover object-center" />
-                    </div>
-                    <h2 className="text-xl font-bold mb-2">Farmaan Syed</h2>
-                    <h3 className="text-lg text-gray-600 mb-2">External Relations Manager</h3>
-                    <p className="text-gray-800 text-center">
-                    “I’m not superstitious, but I am a little stitious.” – Michael Scott                     </p>
-                </div>
-                <div className="flex flex-col items-center bg-white shadow-lg p-4 rounded-lg w-80 h-auto md:h-92 mx-auto mt-8">
-                    <div className="w-36 h-36 rounded-full overflow-hidden">
-                        <img src={require('./pm.jpeg')} alt="Profile" className="w-full h-full object-cover object-center" />
-                    </div>
-                    <h2 className="text-xl font-bold mb-2">Sanchit Goel</h2>
-                    <h3 className="text-lg text-gray-600 mb-2">Projects Manager</h3>
-                    <p className="text-gray-800 text-center">
-                    It is happy hour somewhere                     </p>
-                </div>
-                <div className="flex flex-col items-center bg-white shadow-lg p-4 rounded-lg w-80 h-auto md:h-92 mx-auto mt-8">
-                    <div className="w-36 h-36 rounded-full overflow-hidden">
-                        <img src={require('./em.jpg')} alt="Profile" className="w-full h-full object-cover object-center" />
-                    </div>
-                    <h2 className="text-xl font-bold mb-2">Elvis Tran</h2>
-                    <h3 className="text-lg text-gray-600 mb-2">Event Officer </h3>
-                    <p className="text-gray-800 text-center">
-                    "Debugging is like being the detective in a crime movie where you are also the murderer." - Filipe Fortes                     </p>
-                </div>
-                <div className="flex flex-col items-center bg-white shadow-lg p-4 rounded-lg w-80 h-auto md:h-92 mx-auto mt-8">
-                    <div className="w-36 h-36 rounded-full overflow-hidden">
-                        <img src={require('./socmed2.PNG')} alt="Profile" className="w-full h-full object-cover object-center" />
-                    </div>
-                    <h2 className="text-xl font-bold mb-2">Anne Yeung</h2>
-                    <h3 className="text-lg text-gray-600 mb-2">Social Media Officer</h3>
-                    <p className="text-gray-800 text-center">
-                    MATH = Mental Abuse To Humans                  </p>
-                </div>
-                <div className="flex flex-col items-center bg-white shadow-lg p-4 rounded-lg w-80 h-auto md:h-92 mx-auto mt-8">
-                    <div className="w-36 h-36 rounded-full overflow-hidden">
-                        <img src={require('./socmed1.jpeg')} alt="Profile" className="w-full h-full object-cover object-center" />
-                    </div>
-                    <h2 className="text-xl font-bold mb-2">Alex (Ngoc-Bich) Nguyen</h2>
-                    <h3 className="text-lg text-gray-600 mb-2">Social Media Officer</h3>
-                    <p className="text-gray-800 text-center">
-                    A low-key introvert data analyst who is addicted to social media 🤖                  </p>
-                </div>
-                <div className="flex flex-col items-center bg-white shadow-lg p-4 rounded-lg w-80 h-auto md:h-92 mx-auto mt-8">
-                    <div className="w-36 h-36 rounded-full overflow-hidden">
-                        <img src={require('./meow.jpg')} alt="Profile" className="w-full h-full object-cover object-center" />
-                    </div>
-                    <h2 className="text-xl font-bold mb-2">Mahir N. Islam</h2>
-                    <h3 className="text-lg text-gray-600 mb-2">First-year Representative</h3>
-                    <p className="text-gray-800 text-center">
-                    Life before death, strength before weakness, journey before destination                     </p>
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 py-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {teamMembers.map((member, index) => (
+                        <TeamMemberCard key={index} {...member} />
+                    ))}
                 </div>
             </div>
         </>

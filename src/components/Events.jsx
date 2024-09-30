@@ -126,23 +126,25 @@ const Events = () => {
      };
  
      return (
-         <div className="bg-sky-50 p-8">
-             <div className="container mx-auto">
-                 <div className="flex justify-center">
-                     <Link to="/events" className="inline-block" onClick={handleClick}>
-                         <h1 className="text-3xl mb-4 cursor-pointer hover:text-blue-500 transition-colors duration-200 animate-bounce" title="Click for more events!">Upcoming Events</h1>
-                     </Link>
-                 </div>
-                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                     {past_events.map((past_event, index) => (
-                         <div key={index} className="flex justify-center">
-                             <EventCard {...past_event} />
-                         </div>
-                     ))}
-                 </div>
-             </div>
-         </div>
-     );
+        <div className="bg-sky-50 p-8">
+            <div className="container mx-auto">
+                <div className="flex justify-center">
+                    <Link to="/events" className="inline-block" onClick={handleClick}>
+                        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 cursor-pointer hover:text-blue-500 transition-colors duration-200 animate-bounce" title="Click for more events!">
+                            Upcoming Events
+                        </h1>
+                    </Link>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {past_events.map((past_event, index) => (
+                        <div key={index} className="flex justify-center">
+                            <EventCard {...past_event} />
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+    );
  };
  
  export default Events;

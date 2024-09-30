@@ -39,7 +39,6 @@ function App() {
            } />
            <Route path="/sponsors" element={
               <>
-                <SponsorsPage />
                 <SponsorsPageSponsors />
                 <Footer />
                 <ScrollToTopButton />

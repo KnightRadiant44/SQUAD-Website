@@ -4,9 +4,9 @@ const Sponsors = () => {
     return (
         <div id="Sponsors" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
             <div className="max-w-7xl mx-auto">
-                <div className="text-center">
-                    <h2 className="text-3xl text-gray-900 sm:text-4xl">
-                        Proudly Sponsored By:
+                <div className="text-center mb-12">
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
+                        Proudly Sponsored By
                     </h2>
                 </div>
             </div>
