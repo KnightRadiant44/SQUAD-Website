@@ -120,7 +120,7 @@ const Events = () => {
     // Constant for manual date override. Set to null when using automatic calculation.
     // Format: "YYYY-MM-DD HH:MM" (24-hour format)
     // Example: "2024-10-07 17:30" for October 7, 2024 at 5:30 PM
-    const MANUAL_OVERRIDE_DATE = "2024-10-14 17:30"; // Change this when you need to override
+    const MANUAL_OVERRIDE_DATE = "2024-10-08 17:30"; // Change this when you need to override
 
     // Function to get the next Monday's date
     const getNextMonday = () => {
@@ -157,7 +157,7 @@ const Events = () => {
             title: "Weekly Quant Sessions",
             description: "Want to land a top quant internship? Join SQUAD's weekly program! Master interview skills, tackle tough problems, and network with industry pros from leading Quant Finance Firms! 🚀📈",
             nextSession: getNextSessionDate(),
-            location: 'Barr Smith South 2052',
+            location: 'Barr Smith South 2051',
             instaLink: 'https://www.instagram.com/p/C-81bIeSOm2/',
             sponsors: ['Optiver', 'IMC', 'Citadel', 'Vivcourt'],
         },
