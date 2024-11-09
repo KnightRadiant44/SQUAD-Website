@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-const EventCard = ({ title, description, nextSession, date, instaLink, sponsors, collaborators,location }) => (
+const EventCard = ({ title, description, nextSession, date, instaLink, sponsors, collaborators, location }) => (
     <div className="group bg-gradient-to-br from-white to-sky-100 rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 overflow-hidden relative">
         <div className="absolute inset-0 bg-gradient-to-r from-sky-200 to-blue-200 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
         <h3 className="text-xl font-semibold mb-4 text-gray-800 group-hover:text-indigo-700 transition-colors duration-300">{title}</h3>
@@ -68,21 +68,16 @@ const EventCard = ({ title, description, nextSession, date, instaLink, sponsors,
 );
 
 const Events = () => {
-    // Constant for manual date override. Set to null when using automatic calculation.
-    // Format: "YYYY-MM-DD HH:MM" (24-hour format)
-    // Example: "2024-10-07 17:30" for October 7, 2024 at 5:30 PM
-    const MANUAL_OVERRIDE_DATE = "2024-10-08 17:30"; // Change this when you need to override
- 
-    // Function to get the next Monday's date
+    const MANUAL_OVERRIDE_DATE = "2024-10-08 17:30";
+    
     const getNextMonday = () => {
         const today = new Date();
         const nextMonday = new Date(today);
         nextMonday.setDate(today.getDate() + ((7 - today.getDay() + 1) % 7 || 7));
-        nextMonday.setHours(17, 30, 0, 0); // Set time to 5:30 PM
+        nextMonday.setHours(17, 30, 0, 0);
         return nextMonday;
     };
- 
-    // Function to format the date
+    
     const formatDate = (date) => {
         const options = { 
             year: 'numeric', 
@@ -94,38 +89,23 @@ const Events = () => {
         };
         return date.toLocaleDateString('en-US', options);
     };
- 
-    // Function to get the next session date (either manual override or next Monday)
+    
     const getNextSessionDate = () => {
         if (MANUAL_OVERRIDE_DATE) {
             return formatDate(new Date(MANUAL_OVERRIDE_DATE));
         }
         return formatDate(getNextMonday());
     };
- 
-     const past_events = [
-         {
-             title: "Weekly Quant Sessions",
-             description: "Want to land a top quant internship? Join SQUAD's weekly program! Master interview skills, tackle tough problems, and network with industry pros from leading Quant Finance Firms! 🚀📈",
-             nextSession: getNextSessionDate(),
-             location: 'Barr Smith South 2051',
-             instaLink: 'https://www.instagram.com/p/C_XjU85SMqs/',
-             sponsors: ['Optiver', 'IMC', 'Citadel', 'Vivcourt'],
-         },
-         {
-             title: 'Quant Trading Q/A Panel',
-             description: "Join us for our inaugural event! Attend our upcoming Q&A panel to learn all about quantitative trading from expert panelists representing Optiver, IMC, Jane Street, Citadel Securities, Vivcourt, and Akuna Capital. Don't miss this opportunity to gain insights from industry leaders!",
-             date: 'TBD',
-             location: 'TBD',
-             sponsors: ['Optiver', 'IMC', 'Citadel', 'Vivcourt']
-         },
-     ];
- 
-     const handleClick = () => {
-         document.body.scrollIntoView({ behavior: 'smooth', block: 'start' });
-     };
- 
-     return (
+    
+    // Set this to an empty array to show the "No upcoming events" message
+    // add events details here
+    const past_events = [];
+    
+    const handleClick = () => {
+        document.body.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+    
+    return (
         <div className="bg-sky-50 p-8">
             <div className="container mx-auto">
                 <div className="flex justify-center">
@@ -135,16 +115,33 @@ const Events = () => {
                         </h1>
                     </Link>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {past_events.map((past_event, index) => (
-                        <div key={index} className="flex justify-center">
-                            <EventCard {...past_event} />
+                {past_events.length === 0 ? (
+                    <div className="flex justify-center items-center min-h-[200px]">
+                        <div className="group relative transform hover:-translate-y-2 transition-all duration-300">
+                            <div className="absolute inset-0 bg-gradient-to-r from-sky-200 to-blue-200 opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-lg"></div>
+                            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300">
+                                <p className="text-2xl text-gray-600 font-medium">
+                                    No upcoming events at this time
+                                </p>
+                                <p className="text-gray-500 mt-2">
+                                    Check back soon for new events!
+                                </p>
+                            </div>
+                            <div className="absolute -bottom-2 -right-2 w-16 h-16 bg-sky-200 rounded-full opacity-30 group-hover:scale-150 transition-transform duration-500"></div>
                         </div>
-                    ))}
-                </div>
+                    </div>
+                ) : (
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {past_events.map((past_event, index) => (
+                            <div key={index} className="flex justify-center">
+                                <EventCard {...past_event} />
+                            </div>
+                        ))}
+                    </div>
+                )}
             </div>
         </div>
     );
- };
- 
- export default Events;
+};
+
+export default Events;

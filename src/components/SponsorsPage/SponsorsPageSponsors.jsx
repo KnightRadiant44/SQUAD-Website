@@ -68,10 +68,17 @@ const SponsorsPage = () => {
     {
       name: 'Citadel',
       logo: require('./citadel.jpeg'),
-      description: 'Citadel, a leading proprietary trading firm, is dedicated to providing liquidity to ensure institutions and retail investors have the freedom to trade across global markets under any conditions.',
+      description: 'Citadel, a leading trading firm, is dedicated to providing liquidity to ensure institutions and retail investors have the freedom to trade across global markets.',
       link: 'https://www.citadelsecurities.com/',
       tier: 'bronze'
-    }
+    },
+    {
+      name: 'Jane Street',
+      logo: require('./js2.jpeg'),
+      description: 'Jane Street is a quantitative trading firm and liquidity provider with a unique focus on technology and collaborative problem solving.',
+      link: 'https://www.janestreet.com/',
+      tier: 'bronze'
+    },
   ];
 
   return (
@@ -106,7 +113,14 @@ const SponsorsPage = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 lg:gap-12">
           {sponsors.map((sponsor, index) => (
-            <div key={index} className="lg:p-6">
+            <div 
+              key={index} 
+              className={`lg:p-6 ${
+                index === sponsors.length - 1 && sponsors.length % 2 !== 0 
+                  ? 'md:col-span-2 md:w-1/2 md:mx-auto'
+                  : ''
+              }`}
+            >
               <SponsorCard {...sponsor} />
             </div>
           ))}
